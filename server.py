@@ -1,8 +1,9 @@
 import os
 from flask import Flask, send_from_directory, request
 
+import model
+
 app = Flask(__name__, static_folder='client/build')
-upload_folder = "./uploads/"
 
 # Serve React App
 @app.route('/', defaults={'path': ''})
@@ -18,9 +19,8 @@ def api():
     if 'file' not in request.files:
         return '', 422
     f = request.files['file']
-    f.save(os.path.join(upload_folder, f.filename))
-    # TODO call model
-    return f.filename
+    result = model.predicto(f)
+    return str(result)
 
 
 if __name__ == "__main__":

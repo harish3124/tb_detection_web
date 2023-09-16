@@ -1,2 +1,3 @@
 __pycache__/
-uploads/
+model/__pycache__/
+legacy/
