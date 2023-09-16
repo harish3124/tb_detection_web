@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 
-const NavButton = ({name, viewSetter}) => {
-    const handleClick = () => {
-        viewSetter(name.toLowerCase())
-    }
-  return (
-    <div onClick={handleClick}>{name}</div>
-  )
-}
+const NavButton = ({ name, viewSetter }) => {
+  const handleClick = () => {
+    viewSetter(name.toLowerCase());
+  };
+  return <div onClick={handleClick}>{name}</div>;
+};
 
-export default NavButton
+export default NavButton;
