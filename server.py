@@ -1,4 +1,4 @@
-import os
+import os, json
 from flask import Flask, send_from_directory, request
 
 import model
@@ -14,13 +14,15 @@ def serve(path):
     else:
         return send_from_directory(str(app.static_folder), 'index.html')
 
-@app.route("/api")
+@app.route("/api", methods=['POST'])
 def api():
     if 'file' not in request.files:
         return '', 422
     f = request.files['file']
     result = model.predicto(f)
-    return str(result)
+    return json.dumps({
+        'result': result
+        })
 
 
 if __name__ == "__main__":

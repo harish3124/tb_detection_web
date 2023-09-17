@@ -5,11 +5,11 @@ from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 from flask import *
-from flask_ngrok import run_with_ngrok
+# from flask_ngrok import run_with_ngrok
 
 
 app = Flask(__name__)
-run_with_ngrok(app)
+# run_with_ngrok(app)
 df = pd.read_csv('Features Extraction File.csv')
 df.head()
 df = df[['spectral_centroid', 'spectral_bandwidth', 'rolloff', 'mfcc1', 'mfcc2',
