@@ -1,3 +1,3 @@
 export const About = () => {
-  return <div>This is about view</div>;
+  return <div>The about view</div>;
 };

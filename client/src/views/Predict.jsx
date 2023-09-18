@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Run = () => {
+export const Predict = () => {
     const [file, setFile] = useState(null);
     const [result, setResult] = useState(null)
 
