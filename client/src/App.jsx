@@ -3,37 +3,38 @@ import { useState } from "react";
 import NavButton from "./components/NavButton";
 import { Home, About, Team, Predict } from "./views";
 
-import {ReactComponent as VirusSvg} from './assets/virus.svg';
+import { ReactComponent as VirusSvg } from "./assets/virus.svg";
 import VirusBG from "./assets/virus-background.png";
 
-const viewMap = {
-    home: <Home />,
+function App() {
+  const [view, setView] = useState("home");
+
+  const viewMap = {
+    home: <Home viewSetter={setView} />,
     about: <About />,
     team: <Team />,
     predict: <Predict />,
-};
+  };
 
-function App() {
-    const [view, setView] = useState("home");
-    return (
-        <div className="App">
-            <img src={VirusBG} alt="Virus Background" className="img-bg" id="img-1"/>
-            <img src={VirusBG} alt="Virus Background" className="img-bg" id="img-2"/>
-            <div id="title">
-                <VirusSvg style={{height: '2rem'}} />
-                <div>Tuberculosis</div>
-            </div>
-            <div id="nav">
-                <div>
-                    <NavButton name="Home" viewSetter={setView} />
-                    <NavButton name="About" viewSetter={setView} />
-                    <NavButton name="Team" viewSetter={setView} />
-                    <NavButton name="Predict" viewSetter={setView} />
-                </div>
-            </div>
-            <div id="content">{viewMap[view]}</div>
+  return (
+    <div className="App">
+      <img src={VirusBG} alt="Virus Background" className="img-bg" id="img-1" />
+      <img src={VirusBG} alt="Virus Background" className="img-bg" id="img-2" />
+      <div id="title">
+        <VirusSvg style={{ height: "2rem" }} />
+        <div>Tuberculosis</div>
+      </div>
+      <div id="nav">
+        <div>
+          <NavButton name="Home" viewSetter={setView} />
+          <NavButton name="About" viewSetter={setView} />
+          <NavButton name="Team" viewSetter={setView} />
+          <NavButton name="Predict" viewSetter={setView} />
         </div>
-    );
+      </div>
+      <div id="content">{viewMap[view]}</div>
+    </div>
+  );
 }
 
 export default App;

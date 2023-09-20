@@ -1,6 +1,6 @@
-$primary: #EAEAEA;
-$secondary: #0B0014;
-$accent: #BA2C73;
+$primary: #eaeaea;
+$secondary: #0b0014;
+$accent: #ba2c73;
 $m-width: 76rem;
 
 @mixin flex-center {
@@ -10,28 +10,29 @@ $m-width: 76rem;
 }
 
 * {
-    user-select: none;
-    overflow: hidden;
+  user-select: none;
+  overflow: hidden;
+  color: $secondary;
 }
 
 #img-1 {
-    translate: -40rem -10rem;
-    height: 40rem;
-    width: 40rem;
+  translate: -40rem -10rem;
+  height: 40rem;
+  width: 40rem;
 }
 
 #img-2 {
-    translate: 30rem 10rem;
-    height: 75rem;
-    width: 75rem;
+  translate: 30rem 10rem;
+  height: 75rem;
+  width: 75rem;
 }
 
 .img-bg {
-    position: absolute;
-    pointer-events: none;
-    transform: rotate(10.049deg);
-    // opacity: 0.5;
-    mix-blend-mode: color-burn;
+  position: absolute;
+  pointer-events: none;
+  transform: rotate(10.049deg);
+  // opacity: 0.5;
+  mix-blend-mode: color-burn;
 }
 
 .App {
@@ -42,13 +43,13 @@ $m-width: 76rem;
 }
 
 #title {
-    @include flex-center;
-    height: 2.5rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include flex-center;
+  height: 2.5rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    div {
-        font-size: 1.5rem;
-    }
+  div {
+    font-size: 1.5rem;
+  }
 }
 
 #nav {
@@ -67,17 +68,17 @@ $m-width: 76rem;
 }
 
 .nav-button {
-    height: 100%;
-    width: 14rem;
-    border-right: $secondary 0.05rem solid;
-    border-left: $secondary 0.05rem solid;
-    flex-direction: column;
-    @include flex-center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  width: 14rem;
+  border-right: $secondary 0.05rem solid;
+  border-left: $secondary 0.05rem solid;
+  flex-direction: column;
+  @include flex-center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 #content {
@@ -86,41 +87,41 @@ $m-width: 76rem;
 }
 
 .text-large {
-    font-size: 3rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 5rem;
-    span {
-        background: transparent;
-        color: $accent;
-    }
+  font-size: 3rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5rem;
+  span {
+    background: transparent;
+    color: $accent;
+  }
 }
 
 .text-accent {
-    color: $accent;
+  color: $accent;
 }
 
 .outline-full {
-    border: $secondary 0.1rem solid;
-    height: 33rem;
-    width: $m-width;
-    @include flex-center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    text-align: center;
+  border: $secondary 0.1rem solid;
+  height: 33rem;
+  width: $m-width;
+  @include flex-center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
 }
 
 #btn-predict {
-    color: $accent;
-    border: 0.1rem solid #000;
-    background: $primary;
-    height: 3rem;
-    width: 10rem;
-    font-size: 1.75rem;
-    text-align: center;
-    @include flex-center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: $accent;
+  border: 0.1rem solid $secondary;
+  background: $primary;
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.75rem;
+  text-align: center;
+  @include flex-center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    &:hover {
+  &:hover {
     box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.25);
-    }
+  }
 }
