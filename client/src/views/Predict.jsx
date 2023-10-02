@@ -10,7 +10,7 @@ export const Predict = () => {
     formData.append("file", file);
 
     // TODO Change Url for Production
-    fetch("http://localhost:5000/api", {
+    fetch("http://localhost:5000/predict", {
       method: "POST",
       body: formData,
     }).then((res) => {
@@ -20,18 +20,22 @@ export const Predict = () => {
     });
   };
   return (
-    <div>
+    <div id="predict">
       {result !== null && (
-        <div>You {result ? "" : "DONT"} HAVE Tuberculosis</div>
+        <div>
+          You <span>{result ? "" : "DONT"} HAVE </span> Tuberculosis
+        </div>
       )}
       <form onSubmit={handleSubmit}>
-        <input
-          type="file"
-          accept="audio/*"
-          name="file"
-          required={true}
-          onChange={(e) => setFile(e.target.files[0])}
-        />
+        <div>
+          <input
+            type="file"
+            accept="audio/*"
+            name="file"
+            required={true}
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+        </div>
         <input type="submit" />
       </form>
     </div>

@@ -90,6 +90,7 @@ $m-width: 76rem;
   font-size: 3rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 5rem;
+  text-align: center;
   span {
     background: transparent;
     color: $accent;
@@ -123,5 +124,36 @@ $m-width: 76rem;
 
   &:hover {
     box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+#about {
+  margin: 5rem;
+  margin-top: -2rem;
+}
+
+#models {
+  margin-top: -10rem;
+}
+
+.acc {
+  font-size: 1.5rem;
+  span {
+    background: transparent;
+    color: $accent;
+  }
+}
+
+#predict {
+  border: $secondary 0.1rem solid;
+  height: 20rem;
+  width: 30rem;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  span {
+    background: transparent;
+    color: $accent;
   }
 }
