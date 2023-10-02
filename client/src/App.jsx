@@ -1,7 +1,7 @@
 import "./scss/App.scss";
 import { useState } from "react";
 import NavButton from "./components/NavButton";
-import { Home, About, Team, Predict } from "./views";
+import { Home, About, Models, Predict } from "./views";
 
 import { ReactComponent as VirusSvg } from "./assets/virus.svg";
 import VirusBG from "./assets/virus-background.png";
@@ -12,7 +12,7 @@ function App() {
   const viewMap = {
     home: <Home viewSetter={setView} />,
     about: <About />,
-    team: <Team />,
+    models: <Models />,
     predict: <Predict />,
   };
 
@@ -28,7 +28,7 @@ function App() {
         <div>
           <NavButton name="Home" viewSetter={setView} />
           <NavButton name="About" viewSetter={setView} />
-          <NavButton name="Team" viewSetter={setView} />
+          <NavButton name="Models" viewSetter={setView} />
           <NavButton name="Predict" viewSetter={setView} />
         </div>
       </div>
